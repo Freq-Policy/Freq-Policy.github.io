@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>SeqAfford</title>
+  <title>DexGraspAnything</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,23 +52,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span style="color: #7faf3f;">SeqAfford</span>: <span style="color: #7faf3f;">Seq</span>uential 3D <span style="color: #7faf3f;">Afford</span>ance Reasoning via Multimodal Large Language Model</h1>
+            <h1 class="title is-1 publication-title"><span style="color: #7faf3f;">DexGraspAnything</span>: <span style="color: #7faf3f;">Seq</span>uential 3D <span style="color: #7faf3f;">Afford</span>ance Reasoning via Multimodal Large Language Model</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                Chunlin Yu<sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="https://hq-King.github.io" target="_blank">Hanqing Wang</a><sup>*</sup>,</span>
+                  <a href='https://ymzhong66.github.io' target='_blank'>Yiming Zhong</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    Ye Shi</sup>,</span>
+                    <a href='https://github.com/Kenny-K' target='_blank'>Qi Jiang</a><sup>*</sup>,</span>
                     <span class="author-block">
-                      Haoyang Luo</sup>,</span>
+                      <a href='https://sist.shanghaitech.edu.cn/yujingyi/main.htm' target='_blank'>Jingyi Yu</sup>,</span>
                       <span class="author-block">
-                      Sibei Yang</sup>,</span>
-                        <span class="author-block">
-                          Jingyi Yu</sup>,</span>
-                          <span class="author-block">
-                            Jingya Wang<sup>+</sup>,</span>
+                            <a href='https://yuexinma.me' target='_blank'>Yuexin Ma<sup>+</sup>,</span>
                   </span>
                   </div>
 
@@ -104,7 +98,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/hq-King/SeqAfford" target="_blank"
+                    <a href="https://github.com/4DVLab/DexGrasp-Anything" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -155,10 +149,10 @@
         <div class="content">
           <h2 class="title is-3">Sequential 3D Affordance Reasoning </h2>
          <p>
-              <img src="static\images\fig1.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+              <img src="static\images\teaer_2.pdf" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              We introduce SeqAfford, a Multi-Modal Language Model (MLLM) capable of serialized affordance inference implied in human instructions: 1) Single Affordance Reasoning; 2) Sequential Affordance Reasoning; 3) Sequential Affordance Reasoning with Multiple Objects
+              We present DexGrasp Anything, consistently surpassing previous dexterous grasping generation methods across five benchmarks. Visualization of our method's results are shown on the left.
             </p>
         </div>
       </div>
@@ -175,7 +169,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            3D affordance segmentation aims to link human instructions to touchable regions of 3D objects for embodied manipulations. Existing efforts typically adhere to single-object, single-affordance paradigms, where each affordance type or explicit instruction strictly corresponds to a specific affordance region and are unable to handle long-horizon tasks. Such a paradigm cannot actively reason about complex user intentions that often imply sequential affordances. In this paper, we introduce the Sequential 3D Affordance Reasoning task, which extends the traditional paradigm by reasoning from cumbersome user intentions and then decomposing them into a series of segmentation maps. Toward this, we construct the first instruction-based affordance segmentation benchmark that includes reasoning over both single and sequential affordances, comprising 180K instruction-point cloud pairs. Based on the benchmark, we propose our model, SeqAfford, to unlock the 3D multi-modal large language model with additional affordance segmentation abilities, which ensures reasoning with world knowledge and fine-grained affordance grounding in a cohesive framework. We further introduce a multi-granular language-point integration module to endow 3D dense prediction. Extensive experimental evaluations show that our model excels over well-established methods and exhibits open-world generalization with sequential reasoning abilities. 
+            A dexterous hand capable of grasping any object is essential for the development of general-purpose embodied intelligent robots. However, due to the high degree of freedom in dexterous hands and the vast diversity of objects, generating high-quality, usable grasping poses in a robust manner is a significant challenge. In this paper, we introduce DexGrasp Anything, a method that effectively integrates physical constraints into both the training and sampling phases of a diffusion-based generative model, achieving state-of-the-art performance across nearly all open datasets. Additionally, we present a new dexterous grasping dataset containing over 3.4 million diverse grasping poses for more than 15k different objects, demonstrating its potential to advance universal dexterous grasping.
           </p>
         </div>
       </div>
