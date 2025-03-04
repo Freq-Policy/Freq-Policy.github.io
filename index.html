@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
@@ -43,6 +44,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -130,56 +132,22 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Video Presentation and Real World Experiments</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
           <div class="publication-video">
             <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/KNEY_LKG5Y4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
+          <p>
+            In the first set of real-world experiments, we manually controlled the global position of the robotic hand in ROS RViz to move it up and down, highlighting the stability of the post-grasp motion. In the second set, we employed Inverse Kinematics (IK) to automate the motion planning.
+          </p>          
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- End youtube video -->
-
-
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-        <!-- Your video here -->
-        <!-- <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section> -->
-<!-- End teaser video -->
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Sequential 3D Affordance Reasoning </h2>
-         <p>
-            <embed src="static/images/teaser_2.pdf" type="application/pdf" width="100%" height="600px" />
-            </p>
-            <p>
-              We present DexGrasp Anything, consistently surpassing previous dexterous grasping generation methods across five benchmarks. Visualization of our method's results are shown on the left.
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -189,7 +157,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            A dexterous hand capable of grasping any object is essential for the development of general-purpose embodied intelligent robots. However, due to the high degree of freedom in dexterous hands and the vast diversity of objects, generating high-quality, usable grasping poses in a robust manner is a significant challenge. In this paper, we introduce DexGrasp Anything, a method that effectively integrates physical constraints into both the training and sampling phases of a diffusion-based generative model, achieving state-of-the-art performance across nearly all open datasets. Additionally, we present a new dexterous grasping dataset containing over 3.4 million diverse grasping poses for more than 15k different objects, demonstrating its potential to advance universal dexterous grasping.
+            A dexterous hand capable of grasping any object is essential for the development of general-purpose embodied intelligent robots. However, due to the high degree of freedom in dexterous hands and the vast diversity of objects, generating high-quality, usable grasping poses in a robust manner is a significant challenge. In this paper, we introduce <strong style="color: #FF69B4; font-weight: bold;">DexGrasp Anything</strong>, a method that effectively integrates physical constraints into both the training and sampling phases of a diffusion-based generative model, achieving state-of-the-art performance across nearly all open datasets. Additionally, we present a new dexterous grasping <strong style="color: #FF69B4; font-weight: bold;">dataset containing over 3.4 million diverse grasping poses for more than 15k different objects</strong>, demonstrating its potential to advance universal dexterous grasping.
           </p>
         </div>
       </div>
@@ -198,84 +166,160 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Visualization and Performance -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Preparing the Instructions. </h2>
+          <h2 class="title is-3">Visualization and Performance </h2>
          <p>
-              <img src="static\images\FIG2.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\image1.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              To better utilize the world knowledge of GPT4, We prompt GPT-4o to generate diverse instructions based on 4 types of system prompts containing different modalities as input. Instructions are generated based on input prompts with modalities from a) purely textual affordance type, object name; b) the mesh-rendered image of the object; c) the mesh-rendered image and HOI images that reveal affordances of the object; d) the mesh-rendered image and textual description of the scenario.            </p>
+              We present DexGrasp Anything, consistently surpassing previous dexterous grasping generation methods across five benchmarks. Visualization of our method's results are shown on the left.
+            </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<!-- End Visualization and Performance -->
+ 
+<!-- Method -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3"> Comparison of Exisiting 3D Affordance Dateset with Ours. </h2>
+          <h2 class="title is-3">Method </h2>
          <p>
-              <img src="static\images\fig3.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\image2.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              #Point Cloud and #Instruction-Point Cloud Pairs denote the number of point clouds and instruction-point cloud pairs, respectively. X  indicates that the dataset does not possess this attribute.         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3"> SeqAfford Method </h2>
-         <p>
-              <img src="static\images\fig4.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+              <strong style="color: #FF69B4; font-weight: bold;">Overview of DexGrasp Anything.</strong> During training, object information is processed to extract combined semantic and spatial representations as conditioning inputs. At each noise training step, a clean-estimation of the noisy hand pose \( \hat{h}_0 \) is derived from the predicted noise \( \hat{\epsilon}_t \), with physics constraints guiding the noise distribution toward a cleaner, grasp-suitable distribution. During sampling, the Physics-Guided Sampler obtains the current observation \( \hat{h}_0 \) at each denoising step and performs posterior sampling based on this observation. Physical constraints gradually guide the distribution toward a physically feasible grasp configuration \( \hat{h}^*_0 \), enabling effective grasping of diverse objects.
             </p>
-            <p>
-              Given the point clouds of the target objects and a piece of complex human instruction, SeqAfford first reasons from this instruction and decomposes it into several hidden [SEG] tokens extracted from the last-layer embeddings, each representing an intermediate affordance segmentation result. Then, for each [SEG], the point features extracted by the 3D vision encoder dynamically interact with the [SEG] token before being sent to the decoder for mask generation. The interaction is achieved through multi-granular language-point integration, synergizing both reasoning and affordance segmentation. We use LoRA for efficient fine-tuning.      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3"> Multi-Granular Language-Point Integration Module. </h2>
-         <p>
-              <img src="static\images\fig5.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-            </p>
-            <p>
-              We propose an interaction module between [SEG] tokens from LLM and point features from the 3D vision encoder, to synergize both reasoning and segmentation in a cohesive framework. This module consists of the multi-granular feature propagation process, and the point-language integration stage.    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Qualitative results </h2>
-          <p style="text-align: center;">
-            <img src="static\images\fig.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-          </p>
-          <p>
-            SeqAfford understands human instruction and accurately segments the target affordance.          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
+<!-- Method -->
+
+<!-- Method Performance -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Method Performance </h2>
+         <p>
+          <img src="static\images\image4.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p>
+              Performance comparison across different methods and datasets. Bold numbers indicate the best scores, while underlined numbers indicate the second-best scores. DexGrasp Anything (w/ LLM) achieves the <strong style="color: #FF69B4; font-weight: bold;">highest or near-highest performance </strong>across most metrics.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Method Performance -->
+
+<!-- Dataset -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Dataset </h2>
+         <p>
+          <img src="static\images\image3.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p>
+              Comparison of dexterous grasp datasets. Our dataset achieves <strong style="color: #FF69B4; font-weight: bold;">the largest scale and covers the most diverse set of objects</strong> to date. This is particularly significant. <strong style="color: #FF69B4; font-weight: bold; font-size: 1.2em;">(our dataset is currently the largest publicly available dataset for the shadow hand)</strong>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Dataset -->
+
+<!-- Dataset Performance -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Dataset Performance </h2>
+         <p>
+          <img src="static\images\image5.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p>
+              <strong style="color: #FF69B4; font-weight: bold;">Evaluating Dataset Quality and Cross-Dataset Generalization</strong>. Model performance is compared on DexGraspNet and RealDex, with training on either DexGraspNet or our dataset. The best result within each group is highlighted in bold.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Dataset Performance -->
+
+<!-- Cross-dataset evaluation -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Cross-dataset evaluation </h2>
+         <p>
+          <img src="static\images\image6.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p>
+              Comparison of diversity (bars) and all-direction grasp success rates (triangles/stars/circles) across models trained on different datasets. Trained on single dataset indicates models were trained on the same dataset they are tested on.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Cross-dataset evaluation -->
+
+<!-- Visualization of our method’s results -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Visualization of our method's results </h2>
+         <p>
+          <img src="static\images\image7.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+         </p>
+         <p>
+          <img src="static\images\image8.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+         </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Visualization of our method’s results -->
+
+<!-- Visualization of our method’s results -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Visualization of our method’s results</h2>
+
+      <iframe  src="static/pdfs/sup_ours_results.pdf" width="100%" height="550">
+          </iframe>
+      <iframe  src="static/pdfs/sup_ours_results1.pdf" width="100%" height="550">
+          </iframe>        
+      </div>
+    </div>
+  </section> -->
+<!--Visualization of our method’s results -->
 
 <!-- Youtube video -->
 <!-- <section class="hero is-small is-light">
@@ -352,7 +396,7 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{yu2024seqafford,
@@ -362,7 +406,7 @@
         year={2024}
       }</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
