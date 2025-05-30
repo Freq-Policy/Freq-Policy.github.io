@@ -121,17 +121,6 @@
                 </span>
 
 
-                <!-- Dataset Link -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/GaussionZhong/DexGrasp-Anything/blob/main/Dexgraspanyting.tar.gz" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <!-- <i class="far fa-huggingface"></i> -->
-                      <p style="font-size:18px">🤗</p>
-                  </span>
-                  <span>HuggingFace</span>
-                </a>
-              </span>
                 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -187,26 +176,46 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Visualization and Performance -->
+<!-- Action space in frequency domain  -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Visualization and Performance </h2>
+          <h2 class="title is-3">Action space in frequency domain </h2>
          <p>
-          <img src="static\images\image1.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\insig.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              We present DexGrasp Anything, consistently surpassing previous dexterous grasping generation methods across five benchmarks. Visualization of our method's results are shown on the left.
+              Action signals reconstructed in different frequency domain ranges.
             </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End Visualization and Performance -->
- 
+<!-- End Action space in frequency domain  -->
+
+<!-- Frequency Domain Analysis  -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Frequency Domain Analysis </h2>
+         <p>
+          <img src="static\images\Freq.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p>
+              (a) Heat maps of frequency band energy across action dimensions for different tasks.The top row shows Adroit tasks with high-dimensional actions (26 dimensions), while the bottom row presents Robomimic tasks with low-dimensional actions (10 dimensions). (b) Success rate of actions reconstructed with varying frequency ratios. We reconstruct action sequences using different proportions of frequency components and evaluate their success rates on the original tasks.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Frequency Domain Analysis  -->
+
 <!-- Method -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
@@ -215,10 +224,10 @@
         <div class="content">
           <h2 class="title is-3">Method </h2>
          <p>
-          <img src="static\images\image2.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+          <img src="static\images\pipeline.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              <strong style="color: #FF69B4; font-weight: bold;">Overview of DexGrasp Anything.</strong> During training, object information is processed to extract combined semantic and spatial representations as conditioning inputs. At each noise training step, a clean-estimation of the noisy hand pose \( \hat{h}_0 \) is derived from the predicted noise \( \hat{\epsilon}_t \), with physics constraints guiding the noise distribution toward a cleaner, grasp-suitable distribution. During sampling, the Physics-Guided Sampler obtains the current observation \( \hat{h}_0 \) at each denoising step and performs posterior sampling based on this observation. Physical constraints gradually guide the distribution toward a physically feasible grasp configuration \( \hat{h}^*_0 \), enabling effective grasping of diverse objects.
+              <strong style="color: #FF69B4; font-weight: bold;">Overview of FreqPolicy with both training (a) and inference (b) procedures.</strong> It transforms action trajectories into the frequency domain via DCT, learns latent codes for different frequency level actions using FreqPolicy, and reconstructs actions through masked prediction and a diffusion-based decoder. This enables robust, frequency-aware, and high-fidelity robotic action generation.
             </p>
         </div>
       </div>
@@ -226,6 +235,40 @@
   </div>
 </section>
 <!-- Method -->
+
+<!-- Training -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Training Algorithm</h2>
+         <p>
+          <img src="static\images\training.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+         </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Training -->
+
+<!-- Inference -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Inference Algorithm</h2>
+         <p>
+          <img src="static\images\inference.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+         </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Inference -->
 
 <!-- Method Performance -->
 <section class="section hero is-small">
@@ -238,7 +281,7 @@
           <img src="static\images\image4.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
             </p>
             <p>
-              Performance comparison across different methods and datasets. Bold numbers indicate the best scores, while underlined numbers indicate the second-best scores. DexGrasp Anything (w/ LLM) achieves the <strong style="color: #FF69B4; font-weight: bold;">highest or near-highest performance </strong>across most metrics.
+              Comparison on 10 simulation tasks in Adroit, DexArt and Meta-World. To ensure fair comparison, all tasks employ full-spectrum outputs and identical frequency level progression. * denotes results we reproduced using the same expert demonstrations as ours.
             </p>
         </div>
       </div>
