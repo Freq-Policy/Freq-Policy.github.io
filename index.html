@@ -25,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>DexGraspAnything</title>
+  <title>FreqPolicy</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -54,23 +54,34 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span style="color: #7faf3f;">DexGraspAnything</span>: Towards Universal Robotic Dexterous Grasping with Physics Awareness</h1>
+            <h1 class="title is-1 publication-title"><span style="color: #7faf3f;">FreqPolicy</span>: Frequency Autoregressive Visuomotor Policy with Continuous Tokens</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                  <a href='https://ymzhong66.github.io' target='_blank'>Yiming Zhong</a><sup>*</sup>,</span>
+                  <a href='https://ymzhong66.github.io/' target='_blank'>Yiming Zhong</a>,</span>
                   <span class="author-block">
-                    <a href='https://github.com/Kenny-K' target='_blank'>Qi Jiang</a><sup>*</sup>,</span>
+                    <a href='https://lym29.github.io/' target='_blank'>Yumeng Liu</a>,</span>
                     <span class="author-block">
-                      <a href='https://faculty.sist.shanghaitech.edu.cn/yujingyi/#' target='_blank'>Jingyi Yu</sup>,</span>
+                      <a href='https://xiaochy.github.io/' target='_blank'>Chuyang Xiao</a>,</span>
                       <span class="author-block">
-                            <a href='https://yuexinma.me' target='_blank'>Yuexin Ma</a><sup>+</sup>,</span>
-                  </span>
+                        <a href='https://lym29.github.io/' target='_blank'>Zemin Yang</a>,</span>
+                        <span class="author-block">
+                          <a href='#' target='_blank'>Youzhuo Wang</a>,</span>
+                          <span class="author-block">
+                            <a href='https://github.com/csyufei' target='_blank'>Yufei Zhu</a>,</span>
+                            <span class="author-block">
+                              <a href='https://shiye21.github.io/' target='_blank'>Ye Shi</a>,</span>
+                              <span class="author-block">
+                                <a href='https://yujingsun.github.io/' target='_blank'>Yujing Sun</a>,</span>
+                                <span class="author-block">
+                                  <a href='https://xingezhu.me/aboutme.html' target='_blank'>Xinge Zhu</a>,</span>
+                                  <span class="author-block">
+                                        <a href='https://yuexinma.me' target='_blank'>Yuexin Ma</a><sup>+</sup></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">ShanghaiTech University, Shanghai, China<br><span style="color: #cc3434;">CVPR 2025(Highlight)</span></span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">ShanghaiTech University, Shanghai, China<br></span>
+                    <!-- <span class="author-block">ShanghaiTech University, Shanghai, China<br><span style="color: #cc3434;">CVPR 2025(Highlight)</span></span> -->
                     <span class="eql-cntrb"><small><br><sup>+</sup>Indicates Corresponding Author</small></span>
                   </div>
 
@@ -100,7 +111,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/4DVLab/DexGrasp-Anything" target="_blank"
+                    <a href="https://github.com/4DVLab/FreqPolicy" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -109,16 +120,6 @@
                   </a>
                 </span>
 
-                <!-- Dataset Link -->
-                <span class="link-block">
-                  <a href="https://drive.google.com/file/d/1of-m2qxVqgWf-nHV6oVHPk1z4NWVrEPV/view?usp=drive_link" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-google-drive"></i>
-                  </span>
-                  <span>Dataset</span>
-                </a>
-              </span>
 
                 <!-- Dataset Link -->
                 <span class="link-block">
@@ -128,7 +129,7 @@
                       <!-- <i class="far fa-huggingface"></i> -->
                       <p style="font-size:18px">🤗</p>
                   </span>
-                  <span>Dataset(HF)</span>
+                  <span>HuggingFace</span>
                 </a>
               </span>
                 
@@ -161,10 +162,7 @@
           <div class="publication-video">
             <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/KNEY_LKG5Y4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-          <p>
-            In the first set of real-world experiments, we manually controlled the global position of the robotic hand in ROS RViz to move it up and down, highlighting the stability of the post-grasp motion. In the second set, we employed Inverse Kinematics (IK) to automate the motion planning.
-          </p>          
+          </div>   
         </div>
       </div>
     </div>
@@ -180,7 +178,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            A dexterous hand capable of grasping any object is essential for the development of general-purpose embodied intelligent robots. However, due to the high degree of freedom in dexterous hands and the vast diversity of objects, generating high-quality, usable grasping poses in a robust manner is a significant challenge. In this paper, we introduce <strong style="color: #FF69B4; font-weight: bold;">DexGrasp Anything</strong>, a method that effectively integrates physical constraints into both the training and sampling phases of a diffusion-based generative model, achieving state-of-the-art performance across nearly all open datasets. Additionally, we present a new dexterous grasping <strong style="color: #FF69B4; font-weight: bold;">dataset containing over 3.4 million diverse grasping poses for more than 15k different objects</strong>, demonstrating its potential to advance universal dexterous grasping.
+            Learning effective visuomotor policies for robotic manipulation is challenging, as it requires generating precise actions while maintaining computational efficiency. Existing methods remain unsatisfactory due to inherent limitations in the essential action representation and the basic network architectures. We observe that representing actions in the frequency domain captures the structured nature of motion more effectively: low-frequency components reflect global movement patterns, while high-frequency components encode fine local details. Additionally, robotic manipulation tasks of varying complexity demand different levels of modeling precision across these frequency bands. Motivated by this, we propose a novel paradigm for visuomotor policy learning that progressively models hierarchical frequency components. To further enhance precision, we introduce continuous latent representations that maintain smoothness and continuity in the action space. Extensive experiments across diverse 2D and 3D robotic manipulation benchmarks demonstrate that our approach outperforms existing methods in both accuracy and efficiency, showcasing the potential of a frequency-domain autoregressive framework with continuous tokens for generalized robotic manipulation.
           </p>
         </div>
       </div>
