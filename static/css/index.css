@@ -56,9 +56,14 @@ body {
 }
 
 .publication-venue {
-    color: #555;
+    color: #cc3434;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0.45rem auto 0.25rem;
+    text-align: center;
     width: fit-content;
-    font-weight: bold;
 }
 
 .publication-awards {
@@ -133,5 +138,9 @@ body {
   font-size: smaller;
 }
 
+.publication-notes {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
 
 
